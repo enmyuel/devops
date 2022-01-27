@@ -1,0 +1,12 @@
+version : "3"
+services :
+  react:
+    build:
+      context: .
+      dockerfile : Dockerfile.dev
+    ports:
+      - "3000:3000"
+    volumes:
+      - /myproject3/node_modules
+      - ./:/myproject3
+    stdin_open : true
